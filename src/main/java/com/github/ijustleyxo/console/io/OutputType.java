@@ -5,16 +5,16 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Interface for output type management classes
  */
-public interface Type {
+public interface OutputType {
     /**
      * Returns the logging detail level
      * @return The logging detail level
      */
-    @NotNull Level detail();
+    @NotNull OutputLevel detail();
 
     /**
      * Returns the logging output style
      * @return The logging output style
      */
-    @NotNull Style style();
+    @NotNull OutputStyle style();
 }

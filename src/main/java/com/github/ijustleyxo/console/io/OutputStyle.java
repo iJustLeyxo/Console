@@ -5,7 +5,7 @@ import org.jetbrains.annotations.NotNull;
 /**
  * Interface for logging output style management classes
  */
-public interface Style {
+public interface OutputStyle {
     /**
      * Returns the string of all format codes (ANSI escape codes) to output before a message
      * @return The string of all format codes
