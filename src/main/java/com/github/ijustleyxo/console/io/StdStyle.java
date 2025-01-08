@@ -7,20 +7,20 @@ import org.jetbrains.annotations.NotNull;
  */
 public enum StdStyle implements Style {
     NONE(),
-    DEBUG(Code.GRAY),
-    INFO(Code.WHITE),
-    SUCCESS(Code.GREEN),
-    HELP(Code.GREEN),
-    WARN(Code.BOLD, Code.YELLOW),
-    ERR(Code.BOLD, Code.RED),
-    PROMPT(Code.BOLD, Code.BLUE),
-    INPUT(Code.BOLD, Code.WHITE);
+    DEBUG(EscapeCode.LIGHT_GRAY_FG),
+    INFO(EscapeCode.WHITE_FG),
+    SUCCESS(EscapeCode.LIGHT_GREEN_FG),
+    HELP(EscapeCode.LIGHT_GREEN_FG),
+    WARN(EscapeCode.BOLD, EscapeCode.LIGHT_YELLOW_FG),
+    ERR(EscapeCode.BOLD, EscapeCode.LIGHT_RED_FG),
+    PROMPT(EscapeCode.BOLD, EscapeCode.LIGHT_BLUE_FG),
+    INPUT(EscapeCode.BOLD, EscapeCode.WHITE_FG);
 
     public final @NotNull String codes;
 
-    StdStyle(@NotNull Code @NotNull ... codes) {
+    StdStyle(@NotNull EscapeCode @NotNull ... codes) {
         StringBuilder s = new StringBuilder();
-        for (Code c : codes) {
+        for (EscapeCode c : codes) {
             s.append(c);
         }
         this.codes = s.toString();
