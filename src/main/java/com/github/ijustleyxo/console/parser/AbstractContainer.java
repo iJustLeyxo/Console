@@ -5,9 +5,8 @@ import org.jetbrains.annotations.Nullable;
 /**
  * Container of an element of a generic type
  * @param <T> The type of the container contents
- * @param <E> The type of the throwable that is thrown when adding an argument fails
  */
-public abstract class AbstractContainer<T, E extends Throwable> implements Container<T, E> {
+public abstract class AbstractContainer<T> implements Container<T> {
     /**
      * The contents of the container
      */
