@@ -1,31 +1,12 @@
 package com.github.ijustleyxo.console.io;
 
 /**
- * Default console output detail levels
+ * Interface for logging detail level management classes
  */
-public enum Level implements OutputLevel {
+public interface Level {
     /**
-     * Use this to log anything
+     * Returns the reference value of the detail level, used to compare detail levels. Larger numbers correspond to more detail whilst small numbers correspond to less detail. Default reference value is {@code 0}.
+     * @return The reference value of the detail level
      */
-    MIN(Byte.MIN_VALUE),
-    SILENT((byte) -2),
-    QUIET((byte) -1),
-    NORMAL((byte) 0),
-    NOISY((byte) 1),
-    LOUD((byte) 2),
-    /**
-     * Use this as limit to log everything
-     */
-    MAX(Byte.MAX_VALUE);
-
-    private final byte value;
-
-    Level(byte value) {
-        this.value = value;
-    }
-
-    @Override
-    public byte value() {
-        return this.value;
-    }
+    byte value();
 }
