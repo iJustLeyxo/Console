@@ -1,8 +1,8 @@
 package com.github.ijustleyxo.console.parser;
 
 import com.github.ijustleyxo.console.io.Console;
-import com.github.ijustleyxo.console.io.Style;
-import com.github.ijustleyxo.console.io.Type;
+import com.github.ijustleyxo.console.io.StdStyle;
+import com.github.ijustleyxo.console.io.StdType;
 import org.jetbrains.annotations.NotNull;
 
 /**
@@ -42,7 +42,7 @@ public interface Command { // TODO: Default commands
      * Prints command help
      */
     default void help() { // TODO: What to run on?
-        Console.log(Type.REQUESTED, Style.HELP, this.displayName() + ": " + this.info() + "\n");
+        Console.log(StdType.REQUESTED, StdStyle.HELP, this.displayName() + ": " + this.info() + "\n");
     }
 
     /**
